@@ -22,9 +22,11 @@ public class TurnoController {
 
     //Hacemos esto para instanciar turnoService y que utilice TurnoList
     @Autowired
-    private TurnoService turnoService = new TurnoService(new TurnoList());
-    private PacienteService pacienteService = new PacienteService((new PacienteDAOH2()));
-    private OdontologoService odontologoService = new OdontologoService(new OdontologoDAOH2());
+    private TurnoService turnoService;
+    @Autowired
+    private PacienteService pacienteService;
+    @Autowired
+    private OdontologoService odontologoService;
 
 
     @GetMapping
